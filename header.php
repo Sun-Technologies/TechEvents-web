@@ -20,6 +20,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -28,7 +29,7 @@
   </head>
   <body>
     
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" >
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navigation-header">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header" >
@@ -38,7 +39,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Bangalore Tech Events</a>
+        <a class="navbar-brand" href="index.php">Bangalore Tech Events</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -51,39 +52,3 @@
     </nav>
     <!-- main content start --> 
     <div class="container" style="margin-top:80px;">
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-          <h3 class="panel-title">CODE FOR THE KINGDOM</h3>
-      </div>
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-md-2">
-            <a href="#" class="thumbnail">
-            <img src="img/tech.jpg" alt="...">
-            </a>
-          </div>
-          <div class="col-md-2">
-           <span class="glyphicon glyphicon-time"></span> 19:00  <br>
-           <span class="glyphicon glyphicon-calendar"></span> Fri, 31 Oct 2014 
-          </div>
-          <div class="col-md-2">
-            <span class="glyphicon glyphicon-map-marker"></span> The Chancery Pavilion, Residency Road 
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">Kyron Hackathon</h3>
-      </div>
-      <div class="panel-body">
-
-      </div>
-    </div>
-
-    </div>
-    <!-- main content end --> 
-  </body>
-</html>

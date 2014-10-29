@@ -1,0 +1,50 @@
+#code-time {
+	border-right: 1px solid #66CCCC;
+	padding-left: 10%;
+}
+#code-location {
+	padding-left: 10%;
+}
+#event-title {
+	margin-top: 5%;
+	padding-left: 10%;
+}
+#event-title a {
+	color: #000;
+}
+#panel-header-style {
+	background: #66CCCC;
+	color: #fff;
+}
+#navigation-header {
+	background: #4285f4;
+}
+#navigation-header a {
+	color: #fff;
+}
+.readmore {
+	background: #66CCCC;
+	padding: 10px;
+}
+.readmore a {
+	color: #fff;
+}
+#readmore-style {
+	padding-top: 8%;
+	padding-left: 10%;
+}
+
+/*Event Details Page*/
+.event-heading {
+	background: none;
+	font-weight: bold;
+	padding: 10px;
+	color: #000;
+	font-size: 20px;
+}
+.breadcrumb {
+	background: none;
+}
+.spacing {
+	padding-left: 20px;
+}
