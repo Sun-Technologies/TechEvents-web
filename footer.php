@@ -1,6 +1,6 @@
-<div class="footer" id="navigation-header" style="width: 100%;">
+<div class="footer">
       <div class="container">
-		<h3>&copy; Sun Technologies 2014</h3>
+		<h4  id="suntech">&copy; <a href="http://www.suntechnologies.com">Sun Technologies</a> 2014</h4>
 	  </div>
 </div>
 </body>

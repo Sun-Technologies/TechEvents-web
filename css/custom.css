@@ -26,6 +26,12 @@
 	background: #66CCCC;
 	padding: 10px;
 }
+#go-button {
+	background: #66CCCC;
+	padding: 7px;
+	color: #fff;
+	border: 1px solid #66CCCC;
+}
 .readmore a {
 	color: #fff;
 }
@@ -47,4 +53,24 @@
 }
 .spacing {
 	padding-left: 20px;
+}
+/* Sticky footer styles
+-------------------------------------------------- */
+.footer {
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  height: 40px;
+  background-color: #4285f4;
+}
+/*Add Event*/
+#form-style {
+	padding-left: 10%;
+	padding-bottom: 2.5%;
+}
+#go-button {
+	margin-top: 1%;
+}
+#suntech a {
+	color: #fff;
 }
