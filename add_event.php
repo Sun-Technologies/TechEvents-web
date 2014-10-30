@@ -8,10 +8,10 @@ include 'header.php';
     <input type="text" class="form-control" name="event_title" placeholder="Event Title" required>
     <label>Event Type</label>
     <select name="event_type" class="form-control" required>
-    <option value="">Select AnyOne</option>
-    <option value="hackthons">Hackthons</option>
-    <option value="test">test</option>
-    <option value="test">test</option>
+        <option value="">Select AnyOne</option>
+        <option value="Hackthon">Hackthon</option>
+        <option value="Conference">Conference</option>
+        <option value="Meetups">Meetups</option>
     </select>
     <label>Time</label>
     <input type="time" class="form-control" name="event_time" placeholder="Add Time" required>
@@ -23,6 +23,10 @@ include 'header.php';
     <input type="text" class="form-control" name="short_name" placeholder="Short Name" required>
     <label>Image URL</label>
     <input type="text" class="form-control" name="image_url" placeholder="Image URL" required>
+    <label>Website</label>
+    <input type="text" class="form-control" name="website" placeholder="Website" required>
+     <label>Register</label>
+    <input type="text" class="form-control" name="register" placeholder="Register" required>
     <label>Full Address</label>
     <input type="text" class="form-control" name="full_address" placeholder="Full Address" required>
     <label>Full Description</label>

@@ -2,6 +2,7 @@
 include 'database.php';
 include 'event_actions.php';
 if(isset($_POST['submit'])) { 
+
 	$reqObj= new StdClass;
 	$reqObj->event_title   		= $_POST['event_title'];
 	$reqObj->event_type   		= $_POST['event_type'];
@@ -12,7 +13,10 @@ if(isset($_POST['submit'])) {
 	$reqObj->image_url 		   	= $_POST['image_url'];
 	$reqObj->full_address 		= $_POST['full_address'];
 	$reqObj->full_description 	= $_POST['full_description'];
+	$reqObj->website 			= $_POST['website'];
+	$reqObj->register 			= $_POST['register'];
 	$conn = connect($config);
 	add_event( $reqObj , $conn);
+	
 }
 ?>

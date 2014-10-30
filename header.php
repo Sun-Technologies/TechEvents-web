@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bangalore Tech Events</title>
+    <title>Bangalore IT Events</title>
 
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
@@ -39,13 +39,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">Bangalore Tech Events</a>
+        <a class="navbar-brand" href="index.php">Bangalore IT Events</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="add_event.php">Add Event</a></li>
+         <!--  <li><a href="add_event.php">Add Event</a></li> -->
           <li><a href="#">Who are we</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->

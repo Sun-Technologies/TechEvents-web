@@ -1,5 +1,5 @@
 #code-time {
-	border-right: 1px solid #66CCCC;
+	/*border-right: 1px solid #66CCCC;*/
 	padding-left: 10%;
 }
 #code-location {
@@ -13,7 +13,7 @@
 	color: #000;
 }
 #panel-header-style {
-	background: #66CCCC;
+	background: #7E57C2;
 	color: #fff;
 }
 #navigation-header {
@@ -23,7 +23,7 @@
 	color: #fff;
 }
 .readmore {
-	background: #66CCCC;
+	background: #7E57C2;
 	padding: 10px;
 }
 #go-button {

@@ -33,10 +33,12 @@ CREATE TABLE IF NOT EXISTS `event_list` (
   `short_address` varchar(255) NOT NULL,
   `event_date` date DEFAULT NULL,
   `event_time` time DEFAULT NULL,
-  `short_name` varchar(100) NOT NULL,
+  `short_name` varchar(1000) NOT NULL,
   `image_url` varchar(100) NOT NULL,
   `full_address` varchar(500) NOT NULL,
-  `full_description` varchar(500) NOT NULL,
+  `full_description` varchar(5000) NOT NULL,
+  `website` varchar(500) NOT NULL,
+  `register` varchar(500) NOT NULL
   PRIMARY KEY (`event_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 

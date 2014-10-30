@@ -1,8 +1,8 @@
 <?php
 
 function add_event($reqObj, $conn) {
-  $query = " INSERT INTO event_list (event_title, event_type, event_time, event_date, short_address, short_name, image_url, full_address, full_description ) 
-            VALUES (:event_title, :event_type, :event_time, :event_date, :short_address, :short_name, :image_url, :full_address, :full_description) ";
+  $query = " INSERT INTO event_list (event_title, event_type, event_time, event_date, short_address, short_name, image_url, full_address, full_description , register , website) 
+            VALUES (:event_title, :event_type, :event_time, :event_date, :short_address, :short_name, :image_url, :full_address, :full_description , :register , :website ) ";
   
   $binding = array(
       'event_title'         => $reqObj->event_title,
@@ -13,7 +13,9 @@ function add_event($reqObj, $conn) {
       'short_name'          => $reqObj->short_name,
       'image_url'           => $reqObj->image_url,
       'full_address'        => $reqObj->full_address,
-      'full_description'    => $reqObj->full_description
+      'full_description'    => $reqObj->full_description,
+      'register'            => $reqObj->register,
+      'website'             => $reqObj->website
     );
 
   $results = insert_query_execute( $query, $conn , $binding );
