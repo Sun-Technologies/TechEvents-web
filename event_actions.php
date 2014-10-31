@@ -35,4 +35,35 @@ function fetch_event_details_db($conn, $event_id) {
   $results = query( $query, $conn , $binding );
   return $results;
 }
+
+function setSelectOptions($val_list , $selected_val ){
+  foreach ($val_list as $key => $value) {
+    $sel = ( strval($selected_val) === strval($key) ) ? "selected" : "";
+    echo "<option value=$key  ".$sel." >" .$value."</option>";
+  }
+}
+
+function edit_event_details_db($conn, $event_id, $reqObj) {
+
+  $query = "UPDATE event_list SET event_title=:event_title, event_type=:event_type, event_time=:event_time, event_date=:event_date,"
+      . "short_address=:short_address, short_name=:short_name, image_url=:image_url, full_address=:full_address, register=:register , "
+      . "website=:website where event_id=:event_id";
+
+  $binding = array(
+    'event_id'            => $event_id,
+    'event_title'         => $reqObj->event_title,
+    'event_type'          => $reqObj->event_type,
+    'event_time'          => $reqObj->event_time, 
+    'event_date'          => $reqObj->event_date,
+    'short_address'       => $reqObj->short_address,
+    'short_name'          => $reqObj->short_name,
+    'image_url'           => $reqObj->image_url,
+    'full_address'        => $reqObj->full_address,
+    'register'            => $reqObj->register,
+    'website'             => $reqObj->website    
+  );
+
+  $results = update_query_execute ( $query , $conn , $binding );
+  header('location:index.php');
+}
 ?>

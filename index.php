@@ -2,6 +2,7 @@
 include'header.php'; 
 include 'database.php';
 include 'event_actions.php';
+include 'event_type_array.php';
 $conn = connect($config);
 $results = event_list($conn);
 ?>
@@ -11,7 +12,7 @@ $results = event_list($conn);
     extract($list); ?>
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-header-style">
-        <h3 class="panel-title"><a href="event_details.php?event_id=<?php echo $event_id ?>"><?php echo $event_title; ?></a></h3>
+        <h3 class="panel-title"><a href="event_details.php?event_id=<?php echo $event_id ?>"><?php echo $event_title; ?></a><a href="add_event.php?event_id=<?php echo $event_id ?>" style="float: right;">Edit Event</a></h3>
       </div>
       <div class="panel-body">
         <div class="row">
@@ -26,7 +27,7 @@ $results = event_list($conn);
            <div class="col-md-12"><span class="glyphicon glyphicon-map-marker"></span> <?php echo $short_address; ?></div>
            <div class="col-md-9" style="padding-top:20px"><?php echo $short_name; ?></div> 
            <div class="col-md-12" style="margin-top:20px;margin-bottom:10px;" >
-           <span style="padding:10px;background:#D6DB74"><?php echo $event_type; ?>
+           <span style="padding:10px;background:#D6DB74"><?php echo $event_type_array[$event_type]; ?>
            </div>
            <div class="col-md-12" style="margin-top:20px;margin-bottom:10px;" >
              <span class="readmore"><a href="event_details.php?event_id=<?php echo $event_id ?>">Read More...</a></span>
