@@ -25,10 +25,10 @@ $results = fetch_event_details_db($conn, $event_id);
   <span class="spacing"><span class="glyphicon glyphicon-map-marker"></span> <?php echo $full_address; ?>
   </div>
   <div class="col-md-12" style="padding-bottom: 20px;">
-  <span class="spacing">Website : <a href="<?php echo $full_address; ?>"><?php echo $website; ?></a>
+  <span class="spacing">Website : <a href="<?php echo $website; ?>"><?php echo $website; ?></a>
   </div>
   <div class="col-md-12" style="padding-bottom: 20px;">
-  <span class="spacing">Register : <a href="<?php echo $full_address; ?>"><?php echo $register; ?></a>
+  <span class="spacing">Register : <a href="<?php echo $website; ?>"><?php echo $register; ?></a>
   </div>
   <img src="<?php echo $image_url ?>" alt="<?php echo $event_title; ?>" style="width: 100%; height: 250px;">
   <div class="col-md-12" style="margin-left: -3%;">
