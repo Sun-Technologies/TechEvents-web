@@ -12,7 +12,7 @@ $results = event_list($conn);
     extract($list); ?>
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-header-style">
-        <h3 class="panel-title"><a href="event_details.php?event_id=<?php echo $event_id ?>"><?php echo $event_title; ?></a><a href="add_event.php?event_id=<?php echo $event_id ?>" style="float: right;">Edit Event</a></h3>
+        <h3 class="panel-title"><a href="event_details.php?event_id=<?php echo $event_id ?>"><?php echo $event_title; ?></a></h3>
       </div>
       <div class="panel-body">
         <div class="row">

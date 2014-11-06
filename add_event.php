@@ -17,7 +17,7 @@
         $reqObj->full_address       = $_POST['full_address'];
         $reqObj->full_description   = $_POST['full_description'];
         $reqObj->website            = $_POST['website'];
-        $reqObj->register           = $_POST['register'];
+        $reqObj->register           = $_POST['websitereg'];
         if($event_id) {
             $results = edit_event_details_db($conn, $event_id, $reqObj);
             if($results) {
@@ -59,7 +59,7 @@
     <label>Website</label>
     <input type="text" class="form-control" name="website" placeholder="Website" value="<?php echo isset($website) ? $website : ''; ?>" required>
      <label>Register</label>
-    <input type="text" class="form-control" name="register" placeholder="Register" value="<?php echo isset($register) ? $register : ''; ?>" required>
+    <input type="text" class="form-control" name="websitereg" placeholder="Registration URL" value="<?php echo isset($websitereg) ? $websitereg : ''; ?>" required>
     <label>Full Address</label>
     <input type="text" class="form-control" name="full_address" placeholder="Full Address" value="<?php echo isset($full_address) ? $full_address : ''; ?>" required>
     <label>Full Description</label>

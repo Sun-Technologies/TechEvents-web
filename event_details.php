@@ -9,13 +9,13 @@ $results = fetch_event_details_db($conn, $event_id);
 <?php foreach ($results as $list) { 
     extract($list);  ?>
 
-<div class="col-md-8">
+<div class="col-md-12">
 <ol class="breadcrumb">
   <li><a href="index.php">Home</a></li>
   <li class="active"><?php echo $event_title; ?><!--Code for the Kingdom--></li>
 </ol>
 <h1 class="event-heading"><?php echo $event_title; ?><!--CODE FOR THE KINGDOM--></h1>
-  <div class="col-md-8" style="padding-bottom: 20px;">
+  <div class="col-md-12" style="padding-bottom: 20px;">
     <span class="spacing"><span class="glyphicon glyphicon-time">
     </span><?php echo $event_time;?><!-- time--> </span>
     <span class="spacing"><span class="glyphicon glyphicon-calendar"></span>
@@ -32,7 +32,7 @@ $results = fetch_event_details_db($conn, $event_id);
   </div>
   <img src="<?php echo $image_url ?>" alt="<?php echo $event_title; ?>" style="width: 100%; height: 250px;">
   <div class="col-md-12" style="margin-left: -3%;">
-    <div class="event-heading">Event Description</div>
+    <span class="spacing"><div class="event-heading">Event Description</div>
       <div class="col-md-12">
         <?php echo $list[9]; ?>
        

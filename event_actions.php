@@ -22,7 +22,7 @@ function add_event($reqObj, $conn) {
   header('location:thanks_event.php');
 }
 function event_list($conn) {
-  $query = "SELECT * FROM event_list";
+  $query = "SELECT * FROM event_list order by event_date ";
   $results = query( $query, $conn , null );
   return $results;
 }
