@@ -38,5 +38,5 @@ $results = event_list($conn);
     </div>
     <?php } ?>
  </div>
-    <!-- main content end --> 
+<!-- main content end --> 
 <?php include'footer.php'; ?>

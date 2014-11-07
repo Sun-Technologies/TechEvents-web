@@ -59,11 +59,11 @@
     <label>Website</label>
     <input type="text" class="form-control" name="website" placeholder="Website" value="<?php echo isset($website) ? $website : ''; ?>" required>
      <label>Register</label>
-    <input type="text" class="form-control" name="websitereg" placeholder="Registration URL" value="<?php echo isset($websitereg) ? $websitereg : ''; ?>" required>
+    <input type="text" class="form-control" name="websitereg" placeholder="Registration URL" value="<?php echo isset($register) ? $register : ''; ?>" required>
     <label>Full Address</label>
     <input type="text" class="form-control" name="full_address" placeholder="Full Address" value="<?php echo isset($full_address) ? $full_address : ''; ?>" required>
     <label>Full Description</label>
-    <textarea rows="20" name="full_description" placeholder="Full Description" value="<?php echo isset($full_description) ? $full_description : ''; ?>"></textarea>
+    <textarea rows="20" name="full_description" placeholder="Full Description" ><?php echo isset($full_description) ? $full_description : ''; ?></textarea>
  	<input type="submit" name="submit" id="go-button" value="Submit">
 </form>
 </div>
