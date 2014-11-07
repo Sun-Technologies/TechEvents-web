@@ -13,7 +13,7 @@
 	color: #000;
 }
 #panel-header-style {
-	background: #7E57C2;
+	background: #4285f4;
 	color: #fff;
 }
 #navigation-header {
@@ -23,7 +23,7 @@
 	color: #fff;
 }
 .readmore {
-	background: #7E57C2;
+	background: #4285f4;
 	padding: 10px;
 }
 #go-button {
@@ -73,4 +73,8 @@
 }
 #suntech a {
 	color: #fff;
+}
+#tabs_style {
+	margin-top: 2%;
+	margin-bottom: 2%;
 }

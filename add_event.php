@@ -9,8 +9,11 @@
         $reqObj                     = new StdClass;
         $reqObj->event_title        = $_POST['event_title'];
         $reqObj->event_type         = $_POST['event_type'];
+        $reqObj->issingleday        = $_POST['issingleday'];
         $reqObj->event_time         = $_POST['event_time'];
+        $reqObj->end_time           = $_POST['end_time'];
         $reqObj->event_date         = $_POST['event_date'];
+        $reqObj->end_date           = $_POST['end_date'];
         $reqObj->short_address      = $_POST['short_address'];
         $reqObj->short_name         = $_POST['short_name'];
         $reqObj->image_url          = $_POST['image_url'];
@@ -46,10 +49,19 @@
         <option value="">Select AnyOne</option>
         <?php setSelectOptions($event_type_array  , isset($event_type) ? $event_type : '') ?>
     </select>
-    <label>Time</label>
+    <label>Is Single Day?</label>
+    <select class="form-control" name="issingleday">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    <label>Start Time</label>
     <input type="time" class="form-control" name="event_time" placeholder="Add Time" value="<?php echo isset($event_time) ? $event_time : ''; ?>" required>
-    <label>Date</label>
+    <label>End Time</label>
+    <input type="time" class="form-control" name="end_time" placeholder="End Time" value="<?php echo isset($end_time) ? $end_time : ''; ?>">
+    <label>Start Date</label>
     <input type="date" class="form-control" name="event_date" placeholder="Add Date" value="<?php echo isset($event_date) ? $event_date : ''; ?>" required>
+    <label>End Date</label>
+    <input type="date" class="form-control" name="end_date" placeholder="End Date" value="<?php echo isset($end_date) ? $end_date : ''; ?>">
     <label>Short Address</label>
     <input type="text" class="form-control" name="short_address" placeholder="Short Address" value="<?php echo isset($short_address) ? $short_address : ''; ?>" required>
     <label>Short Name</label>

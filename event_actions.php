@@ -1,8 +1,8 @@
 <?php
 
 function add_event($reqObj, $conn) {
-  $query = " INSERT INTO event_list (event_title, event_type, event_time, event_date, short_address, short_name, image_url, full_address, full_description , register , website) 
-            VALUES (:event_title, :event_type, :event_time, :event_date, :short_address, :short_name, :image_url, :full_address, :full_description , :register , :website ) ";
+  $query = " INSERT INTO event_list (event_title, event_type, event_time, event_date, short_address, short_name, image_url, full_address, full_description , register , website, issingleday, end_time, end_date) 
+            VALUES (:event_title, :event_type, :event_time, :event_date, :short_address, :short_name, :image_url, :full_address, :full_description , :register , :website, :issingleday, :end_time, :end_date ) ";
   
   $binding = array(
       'event_title'         => $reqObj->event_title,
@@ -15,9 +15,11 @@ function add_event($reqObj, $conn) {
       'full_address'        => $reqObj->full_address,
       'full_description'    => $reqObj->full_description,
       'register'            => $reqObj->register,
-      'website'             => $reqObj->website
+      'website'             => $reqObj->website,
+      'issingleday'         => $reqObj->issingleday,
+      'end_time'            => $reqObj->end_time,
+      'end_date'            => $reqObj->end_date
     );
-
   $results = insert_query_execute( $query, $conn , $binding );
   header('location:thanks_event.php');
 }
@@ -47,7 +49,7 @@ function edit_event_details_db($conn, $event_id, $reqObj) {
 
   $query = "UPDATE event_list SET event_title=:event_title, event_type=:event_type, event_time=:event_time, event_date=:event_date,"
       . "short_address=:short_address, short_name=:short_name, image_url=:image_url, full_address=:full_address, register=:register , "
-      . "website=:website where event_id=:event_id";
+      . "website=:website, issingleday=:issingleday, end_time=:end_time, end_date=:end_date where event_id=:event_id";
 
   $binding = array(
     'event_id'            => $event_id,
@@ -60,7 +62,10 @@ function edit_event_details_db($conn, $event_id, $reqObj) {
     'image_url'           => $reqObj->image_url,
     'full_address'        => $reqObj->full_address,
     'register'            => $reqObj->register,
-    'website'             => $reqObj->website    
+    'website'             => $reqObj->website,
+    'issingleday'         => $reqObj->issingleday,
+    'end_time'            => $reqObj->end_time,
+    'end_date'            => $reqObj->end_date   
   );
 
   $results = update_query_execute ( $query , $conn , $binding );

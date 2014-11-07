@@ -28,7 +28,7 @@ $results = fetch_event_details_db($conn, $event_id);
   <span class="spacing">Website : <a href="<?php echo $website; ?>"><?php echo $website; ?></a>
   </div>
   <div class="col-md-12" style="padding-bottom: 20px;">
-  <span class="spacing">Register : <a href="<?php echo $website; ?>"><?php echo $register; ?></a>
+  <span class="spacing">Register : <a href="<?php echo $register; ?>"><?php echo $register; ?></a>
   </div>
   <img src="<?php echo $image_url ?>" class="img-responsive" alt="<?php echo $event_title; ?>" >
   <div class="col-md-12" style="margin-left: -3%;">
