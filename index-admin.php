@@ -12,7 +12,7 @@ $results = event_list($conn);
     extract($list); ?>
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-header-style">
-        <h3 class="panel-title"><a href="event_details.php?event_id=<?php echo $event_id ?>"><?php echo $event_title; ?></a></h3>
+        <h3 class="panel-title"><a href="event_details.php?event_id=<?php echo $event_id ?>"><?php echo $event_title; ?></a> -- <a href="add_event.php?event_id=<?php echo $event_id ?>">Edit</a></h3>
       </div>
       <div class="panel-body">
         <div class="row">
@@ -22,18 +22,18 @@ $results = event_list($conn);
             </a>
           </div>
           <div class="col-md-9">
-            <div class="col-md-12"><span class="glyphicon glyphicon-time"></span> <?php echo getformattedTime($event_time); ?>
+            <div class="col-md-12"><span class="glyphicon glyphicon-time"></span> <?php echo getformattedTime($event_time);  ?>
               <?php 
                 if( $issingleday  == 1 ){
                   if( isset( $end_time ) ) {
-                   echo " to <span class='glyphicon glyphicon-time'></span> " . getformattedTime($end_time);
+                   echo " to <span class='glyphicon glyphicon-time'></span> " . getformattedTime($end_time);  
                   }
                   echo '<span class="spacing"/><span class="glyphicon glyphicon-calendar">' .$event_date;  
                 }else{
                   echo '<span class="spacing"/><span class="glyphicon glyphicon-calendar">' .$event_date; 
                      
                     if( isset( $end_time ) &&  $end_time != '00:00:00') {
-                      echo " to <span class='glyphicon glyphicon-time'></span>" . getformattedTime($end_time);
+                      echo " to <span class='glyphicon glyphicon-time'></span>" . getformattedTime($end_time); 
                     } else{
                       echo " to" ;
                     }

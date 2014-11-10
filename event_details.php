@@ -10,25 +10,41 @@ $results = fetch_event_details_db($conn, $event_id);
     extract($list);  ?>
 
 <div class="col-md-12">
-<ol class="breadcrumb">
-  <li><a href="index.php">Home</a></li>
-  <li class="active"><?php echo $event_title; ?><!--Code for the Kingdom--></li>
-</ol>
-<h1 class="event-heading"><?php echo $event_title; ?><!--CODE FOR THE KINGDOM--></h1>
+  <ol class="breadcrumb">
+    <li><a href="index.php">Home</a></li>
+    <li class="active"><?php echo $event_title; ?><!--Code for the Kingdom--></li>
+  </ol>
+  <h1 class="event-heading"><?php echo $event_title; ?><!--CODE FOR THE KINGDOM--></h1>
   <div class="col-md-12" style="padding-bottom: 20px;">
-    <span class="spacing"><span class="glyphicon glyphicon-time">
-    </span><?php echo $event_time;?><!-- time--> </span>
-    <span class="spacing"><span class="glyphicon glyphicon-calendar"></span>
-    <?php echo $event_date;?><!-- date--> </dpan>
+    <span class="glyphicon glyphicon-time"></span> <?php echo getformattedTime($event_time);  ?>
+    <?php 
+      if( $issingleday  == 1 ){
+        if( isset( $end_time ) ) {
+         echo " to <span class='glyphicon glyphicon-time'></span> " . getformattedTime($end_time);  
+        }
+        echo '<span class="spacing"/><span class="glyphicon glyphicon-calendar">' .$event_date;  
+      }else{
+        echo '<span class="spacing"/><span class="glyphicon glyphicon-calendar">' .$event_date; 
+           
+          if( isset( $end_time ) &&  $end_time != '00:00:00') {
+            echo " to <span class='glyphicon glyphicon-time'></span>" . getformattedTime($end_time); 
+          } else{
+            echo " to" ;
+          }
+          if( isset( $end_date ) ) {
+           echo '<span class="spacing"/><span class="glyphicon glyphicon-calendar">' .$end_date; 
+          }
+      }
+    ?>
+  </div> <!-- date time div --> 
+  <div class="col-md-12" style="padding-bottom: 20px;">
+  <span class="glyphicon glyphicon-map-marker"></span> <?php echo $full_address; ?>
   </div>
   <div class="col-md-12" style="padding-bottom: 20px;">
-  <span class="spacing"><span class="glyphicon glyphicon-map-marker"></span> <?php echo $full_address; ?>
+  Website : <a href="<?php echo $website; ?>" target="_blank"><?php echo $website; ?></a>
   </div>
   <div class="col-md-12" style="padding-bottom: 20px;">
-  <span class="spacing">Website : <a href="<?php echo $website; ?>"><?php echo $website; ?></a>
-  </div>
-  <div class="col-md-12" style="padding-bottom: 20px;">
-  <span class="spacing">Register : <a href="<?php echo $register; ?>"><?php echo $register; ?></a>
+  Register : <a href="<?php echo $register; ?>" target="_blank"><?php echo $register; ?></a>
   </div>
   <img src="<?php echo $image_url ?>" class="img-responsive" alt="<?php echo $event_title; ?>" >
   <div class="col-md-12" style="margin-left: -3%;">

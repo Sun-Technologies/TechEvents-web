@@ -51,8 +51,7 @@
     </select>
     <label>Is Single Day?</label>
     <select class="form-control" name="issingleday">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
+         <?php setSelectOptions ( array ( 1 => "Yes" , 0 => "No"  )  , isset($issingleday) ? $issingleday : '') ?>
     </select>
     <label>Start Time</label>
     <input type="time" class="form-control" name="event_time" placeholder="Add Time" value="<?php echo isset($event_time) ? $event_time : ''; ?>" required>
