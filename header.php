@@ -12,6 +12,7 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,7 +40,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">Bangalore IT Events</a>
+        <a class="navbar-brand" href="index.php"><img src="img/logo.png" alt="IT Events Logo" style="width: 100px; height: 70px; padding-bottom: 20px;" />Bangalore IT Events</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
