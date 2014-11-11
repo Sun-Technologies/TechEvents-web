@@ -14,11 +14,16 @@
 }
 #panel-header-style {
 	background: #4285f4;
+	border-radius: none;
 	color: #fff;
 }
 #navigation-header {
-	background: #4285f4;
+	background: -webkit-linear-gradient(#63BCFF, #216BFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#63BCFF, #216BFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#63BCFF, #216BFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#63BCFF, #216BFF); /* Standard syntax (must be last) */
 	padding-bottom: 25px;
+	border-bottom: 3px solid #184DB8;
 }
 #navigation-header a {
 	color: #fff;
