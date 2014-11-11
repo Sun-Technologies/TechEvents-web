@@ -40,7 +40,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php"><img src="img/logo.png" alt="IT Events Logo" style="width: 100px; height: 70px; padding-bottom: 20px;" />Bangalore IT Events</a>
+        <a class="navbar-brand" href="index.php"><img src="img/logo.png" alt="IT Events Logo" style="width: 100px; height: 70px; padding-bottom: 25px;" />Bangalore IT Events</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->

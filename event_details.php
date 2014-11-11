@@ -5,7 +5,7 @@ $event_id = $_GET['event_id'];
 $conn = connect($config);
 $results = fetch_event_details_db($conn, $event_id);
 ?>
-<div class="container" style="padding-top: 5%;">
+<div class="container" style="margin-top:100px;">
 <?php foreach ($results as $list) { 
     extract($list);  ?>
 

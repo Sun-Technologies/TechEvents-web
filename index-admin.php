@@ -3,11 +3,12 @@ include'header.php';
 include 'database.php';
 include 'event_actions.php';
 include 'event_type_array.php';
+require_once( 'admin/cms.php' ); 
 $conn = connect($config);
 $results = event_list($conn);
 ?>
 
- <div class="container" style="margin-top:80px;">
+ <div class="container" style="margin-top:100px;">
   <?php foreach ($results as $list) {
     extract($list); ?>
     <div class="panel panel-default">
@@ -61,3 +62,4 @@ $results = event_list($conn);
  </div>
 <!-- main content end --> 
 <?php include'footer.php'; ?>
+<?php COUCH::invoke(); ?>
