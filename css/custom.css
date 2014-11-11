@@ -12,8 +12,19 @@
 #event-title a {
 	color: #000;
 }
+.panel {
+	border: none;
+	border-bottom: 1px solid #A8A8A8;
+	border-radius: 0%;
+}
 #panel-header-style {
 	background: #4285f4;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	background: -webkit-linear-gradient(#63BCFF, #216BFF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#63BCFF, #216BFF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#63BCFF, #216BFF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#63BCFF, #216BFF); /* Standard syntax (must be last) */
 	color: #fff;
 }
 #navigation-header {

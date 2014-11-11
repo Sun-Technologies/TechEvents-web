@@ -15,7 +15,7 @@ $results = event_list($conn);
         <h3 class="panel-title"><a href="event_details.php?event_id=<?php echo $event_id ?>"><?php echo $event_title; ?></a></h3>
       </div>
       <div class="panel-body">
-        <div class="row">
+        <div class="row" id="panel-border">
           <div class="col-md-3">
             <a href="event_details.php?event_id=<?php echo $event_id ?>" class="thumbnail">
               <img src="<?php echo $image_url;?>" alt="<?php echo $event_title; ?>"  >
