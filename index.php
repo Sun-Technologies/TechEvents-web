@@ -5,6 +5,7 @@ include 'event_actions.php';
 include 'event_type_array.php';
 $conn = connect($config);
 $results = event_list($conn);
+//$results = [];
 ?>
 
  <div class="container" style="margin-top:100px;">
@@ -59,5 +60,30 @@ $results = event_list($conn);
     </div>
     <?php } ?>
  </div>
+
+<div id="whoweare"> 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <img src="img/bangalore-it-events.png" class="img-responsive" alt="Bangalore IT events">
+      </div>
+      <div class="col-md-7" id="whowearetxt">
+      <p>A Technology centric event discovery website, with the largest collection of technical events happening in Bengaluru. </p>
+      <p>Our aim is to help professionals as well as beginners sharing a common interest in latest technology, to know about the upcoming technical events, seminars, workshops, and meet-ups. 
+      Start using this website to attend your favourite event in your area and enhance your technical knowledge.</p>
+      <p style="margin-top:20px;">
+      Share us via...&nbsp; 
+      <!-- Twitter -->
+      <!-- <a href="http://twitter.com/home?status=" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a> -->
+       <!-- Facebook -->
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://itevents.co.in/" title="Share on Facebook" target="_blank" class="btn btn-facebook">Facebook</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- main content end --> 
+
+
+
 <?php include'footer.php'; ?>
