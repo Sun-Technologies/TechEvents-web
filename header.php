@@ -57,12 +57,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php"><img src="img/logo.png" alt="IT Events Logo" style="width: 100px; height: 70px; padding-bottom: 25px;" />&nbsp;&nbsp;Bangalore IT Events</a>
+        <a class="navbar-brand" href="index.php" id="logo" ><img src="img/logo.png" alt="IT Events Logo" style="width: 100px; height: 70px; padding-bottom: 5%;" />&nbsp;&nbsp;Bangalore IT Events</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right"  id="toogle-icon">
          <li><a href="index.php#whoweare">Who we are</a></li>
          <li><a href="#" data-toggle="modal" data-target="#askus">Contact Us</a></li>
         </ul>
@@ -80,21 +80,23 @@
           <div class="modal-body">
             <form id="contact-form" method="POST" action="contact.php" style="padding-left: 30px;">
         <div class="text-fields">
-          <div class="float-input">
-            <input name="name" id="name" type="text" placeholder="Your Name" style="width: 400px;" required>
+          <div class="float-input col-md-10">
+            <input name="name" id="name" type="text" placeholder="Your Name" required>
             <span><i class="fa fa-user"></i></span>
           </div>
-          <div class="float-input">
-            <input name="mail" id="mail" type="email" placeholder="Your e-mail" style="width: 400px;"required>
+          <div class="float-input col-md-10">
+            <input name="mail" id="mail" type="email" placeholder="Your e-mail" required>
             <span><i class="fa fa-envelope-o"></i></span>
           </div>
-          <div class="float-input">
-            <input name="oname" id="oname" type="text" placeholder="Organization" style="width: 400px;"required>
+          <div class="float-input col-md-10">
+            <input name="oname" id="oname" type="text" placeholder="Organization" required>
             <span><i class="fa fa-link"></i></span>
           </div>
         </div>
-        <textarea name="comment" id="desc" placeholder="Message to us" style="width: 460px;"></textarea>
-        <span style="padding-left: 40%;"><input class="btn btn-primary" type="Submit" id="submit" name="submit" value="SUBMIT" style="width: 100px; font-weight: bold;" onclick="mysubmit()"/></span>
+        <div  class="col-md-10">
+        <textarea name="comment" id="desc" placeholder="Message to us" ></textarea>
+        </div>
+        <span style="padding-left: 40%;" id="submit-button"><input class="btn btn-primary" type="Submit" id="submit" name="submit" value="SUBMIT" style="width: 100px; font-weight: bold;" onclick="mysubmit()"/></span>
         </form>
         </div>
         </div>

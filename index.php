@@ -8,7 +8,7 @@ $results = event_list($conn);
 //$results = [];
 ?>
 
- <div class="container" style="margin-top:100px;">
+ <div class="container" style="margin-top:100px;" id="panel-area">
   <?php foreach ($results as $list) {
     extract($list); ?>
     <div class="panel panel-default">
