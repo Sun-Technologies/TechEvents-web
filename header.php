@@ -18,20 +18,16 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="css/style.css">
+  <!--   <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/custom.css">
-     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    
     <style type="text/css">
   .bs-example{
     margin: 20px;
@@ -82,15 +78,15 @@
         <div class="text-fields">
           <div class="float-input col-md-10">
             <input name="name" id="name" type="text" placeholder="Your Name" required>
-            <span><i class="fa fa-user"></i></span>
+            <span><i class="glyphicon glyphicon-user"></i></span>
           </div>
           <div class="float-input col-md-10">
             <input name="mail" id="mail" type="email" placeholder="Your e-mail" required>
-            <span><i class="fa fa-envelope-o"></i></span>
+            <span><i class="glyphicon glyphicon-envelope"></i></span>
           </div>
           <div class="float-input col-md-10">
             <input name="oname" id="oname" type="text" placeholder="Organization" required>
-            <span><i class="fa fa-link"></i></span>
+            <span><i class="glyphicon glyphicon-briefcase"></i></span>
           </div>
         </div>
         <div  class="col-md-10">

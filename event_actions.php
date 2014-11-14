@@ -26,7 +26,7 @@ function add_event($reqObj, $conn) {
   header('location:index-admin.php');
 }
 function event_list($conn) {
-  $query = "SELECT * FROM event_list where end_date >= NOW() order by event_date ";
+  $query = "SELECT * FROM event_list where end_date >= NOW() order by event_date limit 8 ";
   $results = query( $query, $conn , null );
   return $results;
 }
@@ -82,4 +82,11 @@ function getformattedTime($timestr){
   $tokens = explode(":",$timestr);
   return date("h:iA", mktime($tokens[0], $tokens[1], $tokens[2], 7, 1, 2000));
 }
+
+function gettumbnailimg($image_url_str) {
+   $tokens = explode(".", $image_url_str);
+   return $tokens[0]. '_t.'. $tokens[1];
+   // return $image_url_str; 
+}
+
 ?>
