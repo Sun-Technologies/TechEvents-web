@@ -4,6 +4,7 @@ $event_type_array =  array (
 			  	2 => "Conference" ,
 			  	3 => "Meetups"    , 
 			  	4 => "Expo"       ,
-			  	5 => "Workshop"
+			  	5 => "Workshop"   ,
+			  	6 => "Recruitment drive"
 			);
 ?>
