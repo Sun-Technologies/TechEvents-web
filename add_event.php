@@ -2,7 +2,7 @@
     include 'database.php';
     include 'event_type_array.php';
     include 'event_actions.php';
-    require_once( 'admin/cms.php' );
+    // require_once( 'admin/cms.php' );
     $event_id = isset( $_GET['event_id'] ) ? $_GET['event_id'] : 0 ; 
     $conn = connect($config);
     if(isset($_POST['submit'])) {
@@ -86,4 +86,4 @@ tinymce.init({
  });
 </script>
 <?php include'footer.php'; ?>
-<?php COUCH::invoke(); ?>
+<!-- ?php COUCH::invoke(); ?-->

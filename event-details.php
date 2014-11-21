@@ -1,20 +1,23 @@
-<?php include'header.php'; 
+<?php 
 include 'database.php';
 include 'event_actions.php';
 $event_id = $_GET['event_id'];
 $conn = connect($config);
 $results = fetch_event_details_db($conn, $event_id);
 ?>
-<div class="container" style="margin-top:100px;">
 <?php foreach ($results as $list) { 
-    extract($list);  ?>
-
+    extract($list); 
+    $pg_title = $event_title . ", Bangalore";
+    $description = $short_name;
+?>
+<?php include 'header.php'; ?>
+<div class="container" style="margin-top:100px;">
 <div class="col-md-12">
   <ol class="breadcrumb">
     <li><a href="index.php">Home</a></li>
-    <li class="active"><?php echo $event_title; ?><!--Code for the Kingdom--></li>
+    <li class="active"><?php echo $event_title; ?></li>
   </ol>
-  <h1 class="event-heading"><?php echo $event_title; ?><!--CODE FOR THE KINGDOM--></h1>
+  <h1 class="event-heading"><?php echo $event_title; ?></h1>
   <div class="col-md-12" style="padding-bottom: 20px;">
     <span class="glyphicon glyphicon-time"></span> <?php echo getformattedTime($event_time);  ?>
     <?php 

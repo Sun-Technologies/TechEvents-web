@@ -5,18 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="og:image" content="http://itevents.co.in/img/bangalore-it-events.png"/>
-    <meta name="og:title" content="Bangalore IT Events"/>
-    <meta name="og:description" content="A Technology centric event discovery website, with the largest collection of technical events happening in Bengaluru. 
-      Our aim is to help professionals as well as beginners sharing a common interest in latest technology, to know about the upcoming technical events, seminars, workshops, and meetups. 
-      Start using this website to attend your favorite event in your area and enhance your technical knowledge."/>
-    <title>Bangalore IT Events</title>
+    <meta name="og:title" content="<?php echo isset($pg_title) ? $pg_title : 'Bangalore IT Event' ?>"/>
+    <meta name="og:description" content="<?php echo isset($description) ? $description : '' ?>"/>
+    <title><?php echo isset($pg_title) ? $pg_title : 'Bangalore IT Event' ?></title>
 
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
+<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+ -->
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
     <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -25,14 +23,15 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-  <!--   <link rel="stylesheet" href="css/style.css"> -->
-    <link rel="stylesheet" href="css/custom.css">
+    <!--   <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="stylesheet" href="css/custom.css"> -->
+    <link rel="stylesheet" href="css/all.min.css">
     
     <style type="text/css">
-  .bs-example{
-    margin: 20px;
-      margin-top: 100px;
-  }
+      .bs-example{
+        margin: 20px;
+        margin-top: 100px;
+      }
 </style>
   </head>
   <body>

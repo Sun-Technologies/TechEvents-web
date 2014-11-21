@@ -26,7 +26,7 @@ function add_event($reqObj, $conn) {
   header('location:index-admin.php');
 }
 function event_list($conn) {
-  $query = "SELECT * FROM event_list where end_date >= NOW() order by event_date limit 8 ";
+  $query = "SELECT * FROM event_list where end_date >= NOW() order by event_date  ";
   $results = query( $query, $conn , null );
   return $results;
 }
@@ -51,7 +51,7 @@ function edit_event_details_db($conn, $event_id, $reqObj) {
 
   $query = "UPDATE event_list SET event_title=:event_title, event_type=:event_type, event_time=:event_time, event_date=:event_date,"
       . "short_address=:short_address, short_name=:short_name, image_url=:image_url, full_address=:full_address, register=:register , "
-      . "website=:website, issingleday=:issingleday, end_time=:end_time, end_date=:end_date where event_id=:event_id";
+      . "website=:website, issingleday=:issingleday, end_time=:end_time, end_date=:end_date, full_description=:full_description where event_id=:event_id";
 
 
   $reqObj->end_date  = $reqObj->issingleday == 1 ?  $reqObj->event_date : $reqObj->end_date ; 
@@ -70,7 +70,8 @@ function edit_event_details_db($conn, $event_id, $reqObj) {
     'website'             => $reqObj->website,
     'issingleday'         => $reqObj->issingleday,
     'end_time'            => $reqObj->end_time,
-    'end_date'            => $reqObj->end_date   
+    'end_date'            => $reqObj->end_date ,
+    'full_description'    => $reqObj->full_description,  
   );
 
   $results = update_query_execute ( $query , $conn , $binding );

@@ -1,6 +1,6 @@
 <?php
 $event_type_array =  array (
-			  	1 => "Hackthon"   ,
+			  	1 => "Hackathon"   ,
 			  	2 => "Conference" ,
 			  	3 => "Meetups"    , 
 			  	4 => "Expo"       ,

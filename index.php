@@ -1,25 +1,36 @@
 <?php 
+$pg_title = "Hackathons, Tech Conferences, Tech Workshops happning in Bangalore";
+$description = "A Technology centric event discovery website, with the largest collection of technical events happening in Bengaluru. 
+      Our aim is to help professionals as well as beginners sharing a common interest in latest technology, to know about the upcoming technical events, seminars, workshops, and meetups. 
+      Start using this website to attend your favorite event in your area and enhance your technical knowledge.";
 include'header.php'; 
 include 'database.php';
 include 'event_actions.php';
 include 'event_type_array.php';
+
 $conn = connect($config);
-$results = event_list($conn);
-//$results = [];
+$page_size = 8 ;
+$page = isset ( $_GET['page']  ) ?  $_GET['page']  : 1 ;
+// $results = event_list($conn);
+$results = [];
 ?>
 
  <div class="container" style="margin-top:100px;" id="panel-area">
-  <?php foreach ($results as $list) {
-    extract($list); ?>
+  <?php 
+    
+    $p = $page_size * ( $page  - 1 );
+   
+    for ( $x = $p ; $x < $p + $page_size &&  $x < sizeof($results); $x++ ) {
+    extract($results[$x]);  ?>
     <div class="panel panel-default">
       <div class="panel-heading" id="panel-header-style">
-        <h3 class="panel-title"><a href="event_details.php?event_id=<?php echo $event_id ?>"><?php echo $event_title; ?></a></h3>
+        <h3 class="panel-title"><a href="event-details.php?event_id=<?php echo $event_id ?>"><?php echo $event_title; ?></a></h3>
       </div>
       <div class="panel-body">
         <div class="row" id="panel-border">
           <div class="col-md-3">
-            <a href="event_details.php?event_id=<?php echo $event_id ?>" class="thumbnail">
-              <img src="<?php echo $image_url;?>" alt="<?php echo $event_title; ?>"  >
+            <a href="event-details.php?event_id=<?php echo $event_id ?>" class="thumbnail">
+              <img src="<?php echo gettumbnailimg($image_url);?>" alt="<?php echo $event_title; ?>"  >
             </a>
           </div>
           <div class="col-md-9">
@@ -44,28 +55,51 @@ $results = event_list($conn);
                 }
               ?>
            </div> <!-- end of date time div -->
-          
-
            <div class="col-md-12"><span class="glyphicon glyphicon-map-marker"></span> <?php echo $short_address; ?></div>
            <div class="col-md-9" style="padding-top:20px"><?php echo $short_name; ?></div> 
            <div class="col-md-12" style="margin-top:20px;margin-bottom:10px;" >
            <span style="padding:10px;background:#008000;opacity:0.7;color:#fff"><?php echo $event_type_array[$event_type]; ?>
            </div>
            <div class="col-md-12" style="margin-top:20px;margin-bottom:10px;" >
-             <span class="readmore"><a href="event_details.php?event_id=<?php echo $event_id ?>">Read More...</a></span>
+             <span class="readmore"><a href="event-details.php?event_id=<?php echo $event_id ?>">Read More...</a></span>
           </div>
           </div> 
         </div>
       </div> <!-- end of panel -->
     </div>
     <?php } ?>
+    <nav>
+      <ul class="pagination">
+        <?php if ( $page == 1 ) {  ?> 
+          <li class="disabled">
+        <?php } else {  ?>
+         <li>
+          <?php } ?>
+        <a href="/index.php"><span aria-hidden="true">«</span><span class="sr-only">Previous</span></a></li>
+        <?php for ( $pgno = 1 ; $pgno < (sizeof($results)/$page_size) + 1 ; $pgno++ ) {  ?>
+          <?php if($pgno == $page )  { ?>
+             <li class="active"><a href="/index.php?page=<?php echo $pgno ?>"><?php echo $pgno ?><span class="sr-only">(current)</span></a></li>
+          <?php } else{  ?>
+              <li><a href="/index.php?page=<?php echo $pgno ?>"><?php echo $pgno ?></a></li>
+          <?php } ?> 
+          
+        <?php } ?>
+        <?php  if ( $x >= sizeof($results) ) {  ?> 
+            <li class="disabled">
+        <?php } else {  ?>
+            <li>
+          <?php } ?>
+        <a href="/index.php?page=<?php echo round((sizeof($results)/$page_size) + 1 ); ?>"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
+     </ul>
+   </nav>
  </div>
+
 
 <div id="whoweare"> 
   <div class="container">
     <div class="row">
       <div class="col-md-5">
-        <img src="img/bangalore-it-events.png" class="img-responsive" alt="Bangalore IT events">
+        <img src="img/bangalore-it-events-1x.png" class="img-responsive" alt="Bangalore IT events">
       </div>
       <div class="col-md-7" id="whowearetxt">
       <p>A Technology centric event discovery website, with the largest collection of technical events happening in Bengaluru. </p>
