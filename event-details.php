@@ -9,6 +9,7 @@ $results = fetch_event_details_db($conn, $event_id);
     extract($list); 
     $pg_title = $event_title . ", Bangalore";
     $description = $short_name;
+    $pg_img = 'http://itevents.co.in/' . $image_url;
 ?>
 <?php include 'header.php'; ?>
 <div class="container" style="margin-top:100px;">
